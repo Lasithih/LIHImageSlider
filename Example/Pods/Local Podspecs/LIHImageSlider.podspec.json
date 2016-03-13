@@ -1,15 +1,15 @@
 {
   "name": "LIHImageSlider",
   "version": "0.1.0",
-  "summary": "A short description of LIHImageSlider.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/LIHImageSlider",
+  "summary": "An automatic image slider",
+  "description": "LIHImageSlider is an automatic image slider written in Swift",
+  "homepage": "https://github.com/Lasithih/LIHImageSlider",
   "license": "MIT",
   "authors": {
-    "Lasith Hettiarachchi": "lasith.h@fidenz.com"
+    "Lasith Hettiarachchi": "lasithih@yahoo.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/LIHImageSlider.git",
+    "git": "https://github.com/Lasithih/LIHImageSlider.git",
     "tag": "0.1.0"
   },
   "platforms": {

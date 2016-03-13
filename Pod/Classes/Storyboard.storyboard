@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Slider Item View Controller-->
+        <scene sceneID="hqM-u1-pFN">
+            <objects>
+                <viewController storyboardIdentifier="LIHSliderItem" id="n6J-fz-Vr3" customClass="LIHSliderItemViewController" customModule="LIHImageSlider" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k5O-8K-pPa"/>
+                        <viewControllerLayoutGuide type="bottom" id="zV1-G2-iES"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cq0-mM-dr8">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vNv-Qc-p4e">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vNv-Qc-p4e" firstAttribute="top" secondItem="k5O-8K-pPa" secondAttribute="bottom" id="K4e-VV-gSw"/>
+                            <constraint firstItem="vNv-Qc-p4e" firstAttribute="leading" secondItem="cq0-mM-dr8" secondAttribute="leading" id="Lwa-c4-Nlj"/>
+                            <constraint firstAttribute="trailing" secondItem="vNv-Qc-p4e" secondAttribute="trailing" id="S1b-06-8iE"/>
+                            <constraint firstItem="zV1-G2-iES" firstAttribute="top" secondItem="vNv-Qc-p4e" secondAttribute="bottom" id="ht7-Sl-c4a"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="300"/>
+                    <connections>
+                        <outlet property="imageView" destination="vNv-Qc-p4e" id="pLy-51-Aap"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q7K-iZ-Teh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="326" y="378"/>
+        </scene>
+        <!--Slider View Controller-->
+        <scene sceneID="n2Y-Ug-vvm">
+            <objects>
+                <viewController id="ax0-ms-yip" customClass="LIHSliderViewController" customModule="LIHImageSlider" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aSw-Wg-Bla"/>
+                        <viewControllerLayoutGuide type="bottom" id="ilu-Mo-vqf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fs1-PH-aAo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Uxw-DI-TbS">
+                                <rect key="frame" x="141" y="428" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ilu-Mo-vqf" firstAttribute="top" secondItem="Uxw-DI-TbS" secondAttribute="bottom" constant="15" id="aG5-OP-agw"/>
+                            <constraint firstItem="Uxw-DI-TbS" firstAttribute="centerX" secondItem="fs1-PH-aAo" secondAttribute="centerX" id="qfI-JQ-tXG"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Et-dQ-GMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="468"/>
+        </scene>
+    </scenes>
+</document>

@@ -18,11 +18,11 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = "LIHImageSlider is an automatic image slider written in Swift"
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/LIHImageSlider"
+  s.homepage         = "https://github.com/Lasithih/LIHImageSlider"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Lasith Hettiarachchi" => "lasithih@yahoo.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/LIHImageSlider.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/Lasithih/LIHImageSlider.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '8.0'
