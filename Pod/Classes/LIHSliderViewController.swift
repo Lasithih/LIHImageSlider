@@ -82,7 +82,7 @@ public class LIHSliderViewController: UIViewController {
     }
     
     func pageSwitchTimer(sender: AnyObject) {
-        print("kdck = \(self.pageController.view.frame.size.height)")
+        
         if currentIndex == LIHSlider.sliderImages.count - 1 {
             self.pageController.setViewControllers([self.contentViewController(atIndex: 0)], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: { (complete) -> Void in
                 self.currentIndex = 0
