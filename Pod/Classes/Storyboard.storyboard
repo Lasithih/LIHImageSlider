@@ -51,17 +51,9 @@
                     <view key="view" contentMode="scaleToFill" id="fs1-PH-aAo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <pageControl opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Uxw-DI-TbS">
-                                <rect key="frame" x="141" y="428" width="39" height="37"/>
-                            </pageControl>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ilu-Mo-vqf" firstAttribute="top" secondItem="Uxw-DI-TbS" secondAttribute="bottom" constant="15" id="aG5-OP-agw"/>
-                            <constraint firstItem="Uxw-DI-TbS" firstAttribute="centerX" secondItem="fs1-PH-aAo" secondAttribute="centerX" id="qfI-JQ-tXG"/>
-                        </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Et-dQ-GMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
