@@ -102,8 +102,7 @@ public class LIHSliderViewController: UIViewController {
             return nil
         }
         self.pageControl.hidden = false
-        let storyBoard = UIStoryboard(name: "Storyboard", bundle: NSBundle(forClass: LIHSliderViewController.self))
-        let contentvc: LIHSliderItemViewController? = storyBoard.instantiateViewControllerWithIdentifier("LIHSliderItem") as? LIHSliderItemViewController
+        let contentvc: LIHSliderItemViewController? = LIHSliderItemViewController()
         if let pageContentvc = contentvc {
             
             pageContentvc.image = LIHSlider.sliderImages[index]

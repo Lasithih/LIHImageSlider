@@ -11,7 +11,6 @@
 		252F6B52B49A5541AD39CE378E7E7057 /* LIHSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511DD7B3F4599F1497D99E0F902CEC57 /* LIHSliderViewController.swift */; };
 		409BECC1064C30B9A739CADF4E9FA1E0 /* LIHImageSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22F5677A1E1A61FA0A0A9A5F06CDD3DA /* LIHImageSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76F807A9B4432A8A126150EDC27A976E /* LIHSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95BAED981AACE2C9F96AA42DE2D610C /* LIHSlider.swift */; };
-		789AF8061C95F09A00C33F4B /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5583896541BCD6DFA67EDAA2C67351A5 /* Storyboard.storyboard */; };
 		8B78AD1AC2BE3C2BE633EA476ED355BA /* LIHSliderItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B897D5394120A601A8F60A22F627BC /* LIHSliderItemViewController.swift */; };
 		989C12766A7930F562769B5074312531 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		A65433E4B4E646CF6820F0FF1CB48FC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
@@ -64,7 +63,6 @@
 		4DAC63722EAA95F3FF24C4BF1FA581E3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		508CDE6831EF8FBD231A773F29E00459 /* Pods-LIHImageSlider_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LIHImageSlider_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		511DD7B3F4599F1497D99E0F902CEC57 /* LIHSliderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIHSliderViewController.swift; sourceTree = "<group>"; };
-		5583896541BCD6DFA67EDAA2C67351A5 /* Storyboard.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		63C7FC7B82936F8106336112D27174F1 /* Pods-LIHImageSlider_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LIHImageSlider_Tests-dummy.m"; sourceTree = "<group>"; };
 		671E427EB505E7C9406929E30F1C204A /* Pods-LIHImageSlider_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LIHImageSlider_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		69257970F1F0685A6A704A6BFFE7CB47 /* LIHImageSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LIHImageSlider-dummy.m"; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 				D95BAED981AACE2C9F96AA42DE2D610C /* LIHSlider.swift */,
 				F2B897D5394120A601A8F60A22F627BC /* LIHSliderItemViewController.swift */,
 				511DD7B3F4599F1497D99E0F902CEC57 /* LIHSliderViewController.swift */,
-				5583896541BCD6DFA67EDAA2C67351A5 /* Storyboard.storyboard */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -398,7 +395,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				789AF8061C95F09A00C33F4B /* Storyboard.storyboard in Resources */,
 				B7AB4DC8FEFEFAF477369F183D9B3626 /* LIHImageSlider.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

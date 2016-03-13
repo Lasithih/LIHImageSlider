@@ -10,7 +10,7 @@ import UIKit
 
 class LIHSliderItemViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
+    private var imageView: UIImageView!
     
     var index: Int = 0
     var image: UIImage?
@@ -18,7 +18,16 @@ class LIHSliderItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.imageView = UIImageView()
+        self.view.addSubview(self.imageView)
+        self.imageView.frame = self.view.frame
+        
         self.applyConfig()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        
+        self.imageView.frame = self.view.frame
     }
     
     override func didReceiveMemoryWarning() {
