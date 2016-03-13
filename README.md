@@ -22,7 +22,7 @@ pod "LIHImageSlider"
 
 ## Author
 
-Lasith Hettiarachchi, lasith.h@fidenz.com
+Lasith Hettiarachchi, lasithih@yahoo.com
 
 ## License
 
