@@ -1,0 +1,14 @@
+PODS:
+  - LIHImageSlider (0.1.0)
+
+DEPENDENCIES:
+  - LIHImageSlider (from `../`)
+
+EXTERNAL SOURCES:
+  LIHImageSlider:
+    :path: ../
+
+SPEC CHECKSUMS:
+  LIHImageSlider: 649bac366e5c5437ef317f20e2aa5cdcc0d543fe
+
+COCOAPODS: 0.39.0
