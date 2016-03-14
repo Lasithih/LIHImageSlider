@@ -37,6 +37,7 @@ self.sliderVc2.didMoveToParentViewController(self)
 ```
 
 ## Requirements
+iOS 7+
 
 ## Installation
 
