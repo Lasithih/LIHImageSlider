@@ -33,6 +33,7 @@ class LIHSliderItemViewController: UIViewController {
             self.imageView = imageview
         } else {
             self.imageView = UIImageView()
+            self.imageView.contentMode = UIViewContentMode.ScaleAspectFill
         }
         self.view.addSubview(self.imageView)
         self.imageView.frame = self.view.frame

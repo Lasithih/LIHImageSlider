@@ -11,8 +11,12 @@ import LIHImageSlider
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var container: UIView!
-    private var sliderVc: LIHSliderViewController?
+    @IBOutlet weak var slider1Container: UIView!
+    @IBOutlet weak var slider2Container: UIView!
+    
+    
+    private var sliderVc1: LIHSliderViewController!
+    private var sliderVc2: LIHSliderViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,20 +24,32 @@ class ViewController: UIViewController {
         //Image slider configurations
         let images: [UIImage] = [UIImage(named: "1")!,UIImage(named: "2")!,UIImage(named: "3")!,UIImage(named: "4")!,UIImage(named: "5")!,UIImage(named: "6")!]
         
-        let slider: LIHSlider = LIHSlider(images: images)
         
-        slider.transitionInterval = 3.0 //default is 2.0
+        //Slider One (Top)
+        let slider1: LIHSlider = LIHSlider(images: images)
+        self.sliderVc1  = LIHSliderViewController(slider: slider1)
+        self.addChildViewController(self.sliderVc1)
+        self.view.addSubview(self.sliderVc1.view)
+        self.sliderVc1.didMoveToParentViewController(self)
         
-        let sliderViewController = LIHSliderViewController(slider: slider)
-        self.sliderVc = sliderViewController
-        self.addChildViewController(sliderViewController)
-        self.view.addSubview(sliderViewController.view)
-        sliderViewController.didMoveToParentViewController(self)
+        //Slider Two (Bottom)
+        let slider2: LIHSlider = LIHSlider(images: images)
+            //customizations
+        slider2.transitionInterval = 5.0
+        slider2.transitionStyle = UIPageViewControllerTransitionStyle.PageCurl
+        slider2.slidingOrientation = UIPageViewControllerNavigationOrientation.Vertical
+        slider2.sliderNavigationDirection = UIPageViewControllerNavigationDirection.Reverse
+        
+        self.sliderVc2  = LIHSliderViewController(slider: slider2)
+        self.addChildViewController(self.sliderVc2)
+        self.view.addSubview(self.sliderVc2.view)
+        self.sliderVc2.didMoveToParentViewController(self)
     }
     
     override func viewDidLayoutSubviews() {
         
-        self.sliderVc!.view.frame = self.container.frame
+        self.sliderVc1!.view.frame = self.slider1Container.frame
+        self.sliderVc2!.view.frame = self.slider2Container.frame
     }
 
     override func didReceiveMemoryWarning() {

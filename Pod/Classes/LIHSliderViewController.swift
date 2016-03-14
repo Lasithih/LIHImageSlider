@@ -56,14 +56,12 @@ public class LIHSliderViewController: UIViewController {
         self.pageControl.numberOfPages = self.slider.sliderImages.count
         self.pageControl.currentPage = 0
         
-        
-        pageController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
+        pageController = UIPageViewController(transitionStyle: self.slider.transitionStyle, navigationOrientation: self.slider.slidingOrientation, options: nil)
         pageController.dataSource = self
         pageController.delegate = self
         
         let startingViewController: LIHSliderItemViewController = contentViewController(atIndex: currentIndex)
         pageController.setViewControllers([startingViewController], direction: .Forward, animated: false, completion: nil)
-        
         
         self.view.addSubview(self.pageController.view)
         self.view.bringSubviewToFront(self.pageControl)

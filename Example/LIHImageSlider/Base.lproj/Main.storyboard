@@ -23,17 +23,28 @@
                                     <constraint firstAttribute="height" constant="220" id="4AN-8G-sI9"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGx-BS-aep">
+                                <rect key="frame" x="0.0" y="280" width="320" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="uW8-ij-WgM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HGx-BS-aep" secondAttribute="trailing" id="4vv-rk-Uhb"/>
                             <constraint firstItem="JxD-TS-cRm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="9JC-Bl-Ieh"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="HGx-BS-aep" secondAttribute="bottom" id="LXx-Rs-wMr"/>
                             <constraint firstItem="JxD-TS-cRm" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Uo5-of-GdM"/>
+                            <constraint firstItem="HGx-BS-aep" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="lc0-hl-LgZ"/>
                             <constraint firstAttribute="trailing" secondItem="JxD-TS-cRm" secondAttribute="trailing" id="neE-yh-CkL"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="container" destination="JxD-TS-cRm" id="MO6-fw-ENC"/>
+                        <outlet property="slider1Container" destination="JxD-TS-cRm" id="Z8U-4s-NOE"/>
+                        <outlet property="slider2Container" destination="HGx-BS-aep" id="Lzc-ik-eoX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
