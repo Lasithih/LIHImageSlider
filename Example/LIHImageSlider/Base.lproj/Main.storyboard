@@ -30,6 +30,12 @@
                                     <constraint firstAttribute="height" constant="200" id="uW8-ij-WgM"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIHIMageSlider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJR-0U-gYQ">
+                                <rect key="frame" x="86" y="245" width="149" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -37,6 +43,8 @@
                             <constraint firstItem="JxD-TS-cRm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="9JC-Bl-Ieh"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="HGx-BS-aep" secondAttribute="bottom" id="LXx-Rs-wMr"/>
                             <constraint firstItem="JxD-TS-cRm" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Uo5-of-GdM"/>
+                            <constraint firstItem="MJR-0U-gYQ" firstAttribute="top" secondItem="JxD-TS-cRm" secondAttribute="bottom" constant="5" id="gFO-d1-EcZ"/>
+                            <constraint firstItem="MJR-0U-gYQ" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="gZe-cw-ZVk"/>
                             <constraint firstItem="HGx-BS-aep" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="lc0-hl-LgZ"/>
                             <constraint firstAttribute="trailing" secondItem="JxD-TS-cRm" secondAttribute="trailing" id="neE-yh-CkL"/>
                         </constraints>
