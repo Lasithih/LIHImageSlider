@@ -18,7 +18,7 @@ self.sliderVc1  = LIHSliderViewController(slider: slider1)
 self.addChildViewController(self.sliderVc1)
 self.view.addSubview(self.sliderVc1.view)
 self.sliderVc1.didMoveToParentViewController(self)
-```.
+```
 
 #####Customized Slider
 ```Swift
