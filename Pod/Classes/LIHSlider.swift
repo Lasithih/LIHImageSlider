@@ -16,6 +16,9 @@ public class LIHSlider: NSObject {
     
     public var customImageView: UIImageView?
     
+    public var showPageIndicator: Bool = true
+    
+    //Sliding options
     public var transitionStyle: UIPageViewControllerTransitionStyle = UIPageViewControllerTransitionStyle.Scroll
     
     public var slidingOrientation: UIPageViewControllerNavigationOrientation = UIPageViewControllerNavigationOrientation.Horizontal

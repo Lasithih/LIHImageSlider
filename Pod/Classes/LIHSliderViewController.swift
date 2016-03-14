@@ -38,7 +38,10 @@ public class LIHSliderViewController: UIViewController {
         self.activateTimer()
         
         self.pageControl = UIPageControl()
-        self.view.addSubview(self.pageControl)
+        if self.slider.showPageIndicator {
+            self.view.addSubview(self.pageControl)
+        }
+        
         
         self.initializePager()
         self.pageController.view.backgroundColor = UIColor.blueColor()

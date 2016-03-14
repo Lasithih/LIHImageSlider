@@ -39,6 +39,7 @@ class ViewController: UIViewController {
         slider2.transitionStyle = UIPageViewControllerTransitionStyle.PageCurl
         slider2.slidingOrientation = UIPageViewControllerNavigationOrientation.Vertical
         slider2.sliderNavigationDirection = UIPageViewControllerNavigationDirection.Reverse
+        slider2.showPageIndicator = false
         
         self.sliderVc2  = LIHSliderViewController(slider: slider2)
         self.addChildViewController(self.sliderVc2)
