@@ -17,12 +17,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Image slider configurations
         LIHSlider.sliderImages.append(UIImage(named: "1")!)
         LIHSlider.sliderImages.append(UIImage(named: "2")!)
         LIHSlider.sliderImages.append(UIImage(named: "3")!)
         LIHSlider.sliderImages.append(UIImage(named: "4")!)
         LIHSlider.sliderImages.append(UIImage(named: "5")!)
         LIHSlider.sliderImages.append(UIImage(named: "6")!)
+        
+        LIHSlider.transitionInterval = 3.0 //default is 2.0
         
         let sliderViewController = LIHSliderViewController()
         self.sliderVc = sliderViewController

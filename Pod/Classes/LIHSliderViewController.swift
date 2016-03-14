@@ -21,7 +21,7 @@ public class LIHSliderViewController: UIViewController {
     private var pageTimer: NSTimer?
     
     override public func viewDidLoad() {
-        
+        self.view.backgroundColor = UIColor.orangeColor()
         self.killTimer()
         self.activateTimer()
         
@@ -29,13 +29,12 @@ public class LIHSliderViewController: UIViewController {
         self.view.addSubview(self.pageControl)
         
         self.initializePager()
+        self.pageController.view.backgroundColor = UIColor.blueColor()
     }
     
     public override func viewDidLayoutSubviews() {
         
         self.pageControl.center = CGPointMake(UIScreen.mainScreen().bounds.size.width/2, self.view.frame.size.height - 20)
-        
-        self.pageController.view.frame = self.view.frame
     }
     
     //MARK - Private methods
@@ -54,7 +53,6 @@ public class LIHSliderViewController: UIViewController {
         pageController.setViewControllers([startingViewController], direction: .Forward, animated: false, completion: nil)
         
         
-        self.addChildViewController(pageController)
         self.view.addSubview(self.pageController.view)
         self.view.bringSubviewToFront(self.pageControl)
         pageController.didMoveToParentViewController(self)
@@ -69,6 +67,19 @@ public class LIHSliderViewController: UIViewController {
         
         self.killTimer()
         self.activateTimer()
+    }
+    
+    private func setConstraints() {
+        
+        let top = NSLayoutConstraint(item: self.pageController.view, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0)
+        
+        let bottom = NSLayoutConstraint(item: self.pageController.view, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0)
+        
+        let left = NSLayoutConstraint(item: self.pageController.view, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Left, multiplier: 1, constant: 0)
+        
+        let right = NSLayoutConstraint(item: self.pageController.view, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Right, multiplier: 1, constant: 0)
+        
+        self.view.addConstraints([top,bottom,left,right])
     }
     
     private func activateTimer() {
