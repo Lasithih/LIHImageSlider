@@ -7,7 +7,34 @@
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install` from the Example directory first
+
+#####Default Slider
+```Swift
+let images: [UIImage] = [UIImage(named: "1")!,UIImage(named: "2")!,UIImage(named: "3")!,UIImage(named: "4")!,UIImage(named: "5")!,UIImage(named: "6")!]
+
+let slider1: LIHSlider = LIHSlider(images: images)
+self.sliderVc1  = LIHSliderViewController(slider: slider1)
+self.addChildViewController(self.sliderVc1)
+self.view.addSubview(self.sliderVc1.view)
+self.sliderVc1.didMoveToParentViewController(self)
+```.
+
+#####Customized Slider
+```Swift
+let slider2: LIHSlider = LIHSlider(images: images)
+    //customizations
+slider2.transitionInterval = 5.0
+slider2.transitionStyle = UIPageViewControllerTransitionStyle.PageCurl
+slider2.slidingOrientation = UIPageViewControllerNavigationOrientation.Vertical
+slider2.sliderNavigationDirection = UIPageViewControllerNavigationDirection.Reverse
+slider2.showPageIndicator = false
+        
+self.sliderVc2  = LIHSliderViewController(slider: slider2)
+self.addChildViewController(self.sliderVc2)
+self.view.addSubview(self.sliderVc2.view)
+self.sliderVc2.didMoveToParentViewController(self)
+```
 
 ## Requirements
 
