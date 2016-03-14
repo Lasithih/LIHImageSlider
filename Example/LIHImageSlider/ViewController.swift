@@ -18,16 +18,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //Image slider configurations
-        LIHSlider.sliderImages.append(UIImage(named: "1")!)
-        LIHSlider.sliderImages.append(UIImage(named: "2")!)
-        LIHSlider.sliderImages.append(UIImage(named: "3")!)
-        LIHSlider.sliderImages.append(UIImage(named: "4")!)
-        LIHSlider.sliderImages.append(UIImage(named: "5")!)
-        LIHSlider.sliderImages.append(UIImage(named: "6")!)
+        let images: [UIImage] = [UIImage(named: "1")!,UIImage(named: "2")!,UIImage(named: "3")!,UIImage(named: "4")!,UIImage(named: "5")!,UIImage(named: "6")!]
         
-        LIHSlider.transitionInterval = 3.0 //default is 2.0
+        let slider: LIHSlider = LIHSlider(images: images)
         
-        let sliderViewController = LIHSliderViewController()
+        slider.transitionInterval = 3.0 //default is 2.0
+        
+        let sliderViewController = LIHSliderViewController(slider: slider)
         self.sliderVc = sliderViewController
         self.addChildViewController(sliderViewController)
         self.view.addSubview(sliderViewController.view)

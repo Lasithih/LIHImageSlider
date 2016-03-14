@@ -20,6 +20,18 @@ public class LIHSliderViewController: UIViewController {
     }
     private var pageTimer: NSTimer?
     
+    private var slider: LIHSlider!
+    
+    public init(slider: LIHSlider) {
+        super.init(nibName: nil, bundle: nil)
+        
+        self.slider = slider
+    }
+
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override public func viewDidLoad() {
         self.view.backgroundColor = UIColor.orangeColor()
         self.killTimer()
@@ -41,7 +53,7 @@ public class LIHSliderViewController: UIViewController {
     private func initializePager() {
         
         //Initialize page view controller
-        self.pageControl.numberOfPages = LIHSlider.sliderImages.count
+        self.pageControl.numberOfPages = self.slider.sliderImages.count
         self.pageControl.currentPage = 0
         
         
@@ -84,7 +96,7 @@ public class LIHSliderViewController: UIViewController {
     
     private func activateTimer() {
         
-        self.pageTimer = NSTimer.scheduledTimerWithTimeInterval(LIHSlider.transitionInterval, target: self, selector: "pageSwitchTimer:", userInfo: nil, repeats: true)
+        self.pageTimer = NSTimer.scheduledTimerWithTimeInterval(self.slider.transitionInterval, target: self, selector: "pageSwitchTimer:", userInfo: nil, repeats: true)
     }
     
     private func killTimer() {
@@ -94,7 +106,7 @@ public class LIHSliderViewController: UIViewController {
     
     func pageSwitchTimer(sender: AnyObject) {
         
-        if currentIndex == LIHSlider.sliderImages.count - 1 {
+        if currentIndex == self.slider.sliderImages.count - 1 {
             self.pageController.setViewControllers([self.contentViewController(atIndex: 0)], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: { (complete) -> Void in
                 self.currentIndex = 0
             })
@@ -108,15 +120,15 @@ public class LIHSliderViewController: UIViewController {
     
     
     private func contentViewController(atIndex index: Int) -> LIHSliderItemViewController! {
-        if LIHSlider.sliderImages.count == 0 || index >= LIHSlider.sliderImages.count {
+        if self.slider.sliderImages.count == 0 || index >= self.slider.sliderImages.count {
             self.pageControl.hidden = true
             return nil
         }
         self.pageControl.hidden = false
-        let contentvc: LIHSliderItemViewController? = LIHSliderItemViewController()
+        let contentvc: LIHSliderItemViewController? = LIHSliderItemViewController(slider: self.slider)
         if let pageContentvc = contentvc {
             
-            pageContentvc.image = LIHSlider.sliderImages[index]
+            pageContentvc.image = self.slider.sliderImages[index]
             pageContentvc.index = index
             return pageContentvc
         }
@@ -133,7 +145,7 @@ extension LIHSliderViewController: UIPageViewControllerDataSource, UIPageViewCon
         let vc = viewController as! LIHSliderItemViewController
         let index = vc.index
         
-        if index == LIHSlider.sliderImages.count - 1 {
+        if index == self.slider.sliderImages.count - 1 {
             return self.contentViewController(atIndex: 0)
         }
         
@@ -146,7 +158,7 @@ extension LIHSliderViewController: UIPageViewControllerDataSource, UIPageViewCon
         let index = vc.index
         
         if index == 0 {
-            return self.contentViewController(atIndex: LIHSlider.sliderImages.count - 1)
+            return self.contentViewController(atIndex: self.slider.sliderImages.count - 1)
         }
         
         return self.contentViewController(atIndex: index - 1)

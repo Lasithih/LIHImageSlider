@@ -8,9 +8,16 @@
 
 import Foundation
 
-public class LIHSlider {
+public class LIHSlider: NSObject {
     
-    public static var sliderImages: [UIImage] = []
+    public var sliderImages: [UIImage] = []
     
-    public static var transitionInterval: Double = 2.0
+    public var transitionInterval: Double = 2.0
+    
+    public var customImageView: UIImageView?
+    
+    public init(images: [UIImage]) {
+        
+        self.sliderImages = images
+    }
 }
