@@ -9,7 +9,7 @@
 import UIKit
 import LIHImageSlider
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, LIHSliderDelegate {
     
     @IBOutlet weak var slider1Container: UIView!
     @IBOutlet weak var slider2Container: UIView!
@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         //Slider One (Top)
         let slider1: LIHSlider = LIHSlider(images: images)
         self.sliderVc1  = LIHSliderViewController(slider: slider1)
+        sliderVc1.delegate = self
         self.addChildViewController(self.sliderVc1)
         self.view.addSubview(self.sliderVc1.view)
         self.sliderVc1.didMoveToParentViewController(self)
@@ -58,5 +59,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    
+    func itemPressedAtIndex(index index: Int) {
+        
+        print("index \(index) is pressed")
+    }
 }
 

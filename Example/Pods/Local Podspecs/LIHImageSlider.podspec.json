@@ -1,6 +1,6 @@
 {
   "name": "LIHImageSlider",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "An automatic image slider",
   "description": "LIHImageSlider is an automatic image slider written in Swift",
   "homepage": "https://github.com/Lasithih/LIHImageSlider",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/Lasithih/LIHImageSlider.git",
-    "tag": "0.1.0"
+    "tag": "0.2.0"
   },
   "platforms": {
     "ios": "8.0"

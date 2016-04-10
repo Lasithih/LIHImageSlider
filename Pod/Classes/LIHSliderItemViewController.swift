@@ -8,14 +8,22 @@
 
 import UIKit
 
-class LIHSliderItemViewController: UIViewController {
+@objc protocol LIHSliderItemDelegate {
+    
+    func itemPressedAtIndex(index: Int)
+}
 
+class LIHSliderItemViewController: UIViewController {
+    
     private var imageView: UIImageView!
+    private var button: UIButton!
     
     var index: Int = 0
     var image: UIImage?
     
     private var slider: LIHSlider!
+    
+    var delegate: LIHSliderItemDelegate?
     
     init(slider: LIHSlider){
         super.init(nibName: nil, bundle: nil)
@@ -35,8 +43,12 @@ class LIHSliderItemViewController: UIViewController {
             self.imageView = UIImageView()
             self.imageView.contentMode = UIViewContentMode.ScaleAspectFill
         }
+        self.button = UIButton()
+        self.button.addTarget(self, action: Selector("pressed:"), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(self.imageView)
+        self.view.addSubview(self.button)
         self.imageView.frame = self.view.frame
+        self.button.frame = self.imageView.frame
         
         self.applyConfig()
     }
@@ -44,6 +56,7 @@ class LIHSliderItemViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         
         self.imageView.frame = self.view.frame
+        self.button.frame = self.imageView.frame
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,6 +76,11 @@ class LIHSliderItemViewController: UIViewController {
         } else {
             self.imageView.image = defaultImage
         }
+    }
+    
+    internal func pressed(sender:UIButton) {
+        
+        self.delegate?.itemPressedAtIndex(self.index)
     }
 
 }

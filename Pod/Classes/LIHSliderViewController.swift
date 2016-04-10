@@ -8,7 +8,12 @@
 
 import UIKit
 
-public class LIHSliderViewController: UIViewController {
+@objc public protocol LIHSliderDelegate {
+    
+    func itemPressedAtIndex(index index: Int)
+}
+
+public class LIHSliderViewController: UIViewController, LIHSliderItemDelegate {
 
     //@IBOutlet weak var pageControl: UIPageControl!
     private var pageControl: UIPageControl!
@@ -27,6 +32,8 @@ public class LIHSliderViewController: UIViewController {
         
         self.slider = slider
     }
+    
+    public var delegate: LIHSliderDelegate?
 
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -131,10 +138,17 @@ public class LIHSliderViewController: UIViewController {
             
             pageContentvc.image = self.slider.sliderImages[index]
             pageContentvc.index = index
+            pageContentvc.delegate = self
             return pageContentvc
         }
         
         return nil
+    }
+    
+    
+    func itemPressedAtIndex(index: Int) {
+        
+        self.delegate?.itemPressedAtIndex(index: index)
     }
 
 }

@@ -38,6 +38,15 @@ self.view.addSubview(self.sliderVc2.view)
 self.sliderVc2.didMoveToParentViewController(self)
 ```
 
+#####Item Click
+Implement from `LIHSliderDelegate` 
+```Swift
+func itemPressedAtIndex(index index: Int) {
+
+}
+```
+
+
 ## Requirements
 iOS 7+
 
