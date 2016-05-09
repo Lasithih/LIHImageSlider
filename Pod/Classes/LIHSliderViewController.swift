@@ -104,12 +104,13 @@ public class LIHSliderViewController: UIViewController, LIHSliderItemDelegate {
     
     private func activateTimer() {
         
-        self.pageTimer = NSTimer.scheduledTimerWithTimeInterval(self.slider.transitionInterval, target: self, selector: "pageSwitchTimer:", userInfo: nil, repeats: true)
+        self.pageTimer = NSTimer.scheduledTimerWithTimeInterval(self.slider.transitionInterval, target: self, selector: #selector(LIHSliderViewController.pageSwitchTimer(_:)), userInfo: nil, repeats: true)
     }
     
     private func killTimer() {
         self.pageTimer?.invalidate()
         self.pageTimer = nil
+        
     }
     
     func pageSwitchTimer(sender: AnyObject) {

@@ -49,7 +49,7 @@ class LIHSliderItemViewController: UIViewController {
         
         
         self.button = UIButton()
-        self.button.addTarget(self, action: Selector("pressed:"), forControlEvents: UIControlEvents.TouchUpInside)
+        self.button.addTarget(self, action: #selector(LIHSliderItemViewController.pressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(self.imageView)
         self.view.addSubview(self.button)
         self.imageView.frame = self.view.frame
