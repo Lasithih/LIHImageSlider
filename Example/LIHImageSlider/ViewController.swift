@@ -16,7 +16,7 @@ class ViewController: UIViewController, LIHSliderDelegate {
     
     
     private var sliderVc1: LIHSliderViewController!
-    private var sliderVc2: LIHSliderViewController!
+//    private var sliderVc2: LIHSliderViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,7 @@ class ViewController: UIViewController, LIHSliderDelegate {
         
         //Slider One (Top)
         let slider1: LIHSlider = LIHSlider(images: images)
+        slider1.sliderDescriptions = ["Image 1 description","Image 2 description","Image 3 description","Image 4 description","Image 5 description","Image 6 description"]
         self.sliderVc1  = LIHSliderViewController(slider: slider1)
         sliderVc1.delegate = self
         self.addChildViewController(self.sliderVc1)
@@ -34,24 +35,24 @@ class ViewController: UIViewController, LIHSliderDelegate {
         self.sliderVc1.didMoveToParentViewController(self)
         
         //Slider Two (Bottom)
-        let slider2: LIHSlider = LIHSlider(images: images)
-            //customizations
-        slider2.transitionInterval = 5.0
-        slider2.transitionStyle = UIPageViewControllerTransitionStyle.PageCurl
-        slider2.slidingOrientation = UIPageViewControllerNavigationOrientation.Vertical
-        slider2.sliderNavigationDirection = UIPageViewControllerNavigationDirection.Reverse
-        slider2.showPageIndicator = false
-        
-        self.sliderVc2  = LIHSliderViewController(slider: slider2)
-        self.addChildViewController(self.sliderVc2)
-        self.view.addSubview(self.sliderVc2.view)
-        self.sliderVc2.didMoveToParentViewController(self)
+//        let slider2: LIHSlider = LIHSlider(images: images)
+//            //customizations
+//        slider2.transitionInterval = 5.0
+//        slider2.transitionStyle = UIPageViewControllerTransitionStyle.PageCurl
+//        slider2.slidingOrientation = UIPageViewControllerNavigationOrientation.Vertical
+//        slider2.sliderNavigationDirection = UIPageViewControllerNavigationDirection.Reverse
+//        slider2.showPageIndicator = false
+//        
+//        self.sliderVc2  = LIHSliderViewController(slider: slider2)
+//        self.addChildViewController(self.sliderVc2)
+//        self.view.addSubview(self.sliderVc2.view)
+//        self.sliderVc2.didMoveToParentViewController(self)
     }
     
     override func viewDidLayoutSubviews() {
         
         self.sliderVc1!.view.frame = self.slider1Container.frame
-        self.sliderVc2!.view.frame = self.slider2Container.frame
+//        self.sliderVc2!.view.frame = self.slider2Container.frame
     }
 
     override func didReceiveMemoryWarning() {

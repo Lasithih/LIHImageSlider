@@ -12,6 +12,14 @@ public class LIHSlider: NSObject {
     
     public var sliderImages: [UIImage] = []
     
+    public var sliderDescriptions: [String] = []
+    public var descriptionColor: UIColor = UIColor.whiteColor()
+    public var descriptionBackgroundAlpha: CGFloat = 0.3
+    public var descriptionBackgroundColor: UIColor = UIColor.blackColor()
+    public var descriptionFont: UIFont = UIFont.systemFontOfSize(15)
+    
+    public var numberOfLinesInDescription: Int = 2
+    
     public var transitionInterval: Double = 3.0
     
     public var customImageView: UIImageView?

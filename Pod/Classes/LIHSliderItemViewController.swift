@@ -17,9 +17,12 @@ class LIHSliderItemViewController: UIViewController {
     
     private var imageView: UIImageView!
     private var button: UIButton!
+    private var lblDescription: UILabel?
+    private var labelContainer: UIView?
     
     var index: Int = 0
     var image: UIImage?
+    var desc: String?
     
     private var slider: LIHSlider!
     
@@ -43,12 +46,34 @@ class LIHSliderItemViewController: UIViewController {
             self.imageView = UIImageView()
             self.imageView.contentMode = UIViewContentMode.ScaleAspectFill
         }
+        
+        
         self.button = UIButton()
         self.button.addTarget(self, action: Selector("pressed:"), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(self.imageView)
         self.view.addSubview(self.button)
         self.imageView.frame = self.view.frame
         self.button.frame = self.imageView.frame
+        
+        
+        
+        if self.slider.sliderDescriptions.count > 0 {
+            self.lblDescription = UILabel()
+            self.lblDescription?.numberOfLines = self.slider.numberOfLinesInDescription
+            self.lblDescription?.textColor = self.slider.descriptionColor
+            let lblHeight = self.view.frame.size.height / 2
+            let lblY = self.view.frame.origin.y + lblHeight
+            self.lblDescription?.font = self.slider.descriptionFont
+            self.lblDescription?.frame = CGRectMake(self.view.frame.origin.x+10, lblY, self.view.frame.size.width-10, lblHeight)
+            
+            self.labelContainer = UIView()
+            self.labelContainer?.backgroundColor = self.slider.descriptionBackgroundColor
+            self.labelContainer?.alpha = self.slider.descriptionBackgroundAlpha
+            self.labelContainer?.frame = CGRectMake(self.view.frame.origin.x, lblY, self.view.frame.size.width, lblHeight)
+            
+            self.view.addSubview(self.labelContainer!)
+            self.view.addSubview(self.lblDescription!)
+        }
         
         self.applyConfig()
     }
@@ -57,6 +82,10 @@ class LIHSliderItemViewController: UIViewController {
         
         self.imageView.frame = self.view.frame
         self.button.frame = self.imageView.frame
+        let lblHeight = self.view.frame.size.height / 2
+        let lblY = self.view.frame.origin.y + lblHeight
+        self.lblDescription?.frame = CGRectMake(self.view.frame.origin.x+10, lblY, self.view.frame.size.width-10, lblHeight)
+        self.labelContainer?.frame = CGRectMake(self.view.frame.origin.x, lblY, self.view.frame.size.width, lblHeight)
     }
     
     override func didReceiveMemoryWarning() {
@@ -75,6 +104,12 @@ class LIHSliderItemViewController: UIViewController {
             
         } else {
             self.imageView.image = defaultImage
+        }
+        
+        if let description = self.desc {
+            self.lblDescription?.text = description
+        } else {
+            self.labelContainer?.hidden = true
         }
     }
     

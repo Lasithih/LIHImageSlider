@@ -136,7 +136,13 @@ public class LIHSliderViewController: UIViewController, LIHSliderItemDelegate {
         let contentvc: LIHSliderItemViewController? = LIHSliderItemViewController(slider: self.slider)
         if let pageContentvc = contentvc {
             
-            pageContentvc.image = self.slider.sliderImages[index]
+            if self.slider.sliderImages.count > index {
+                pageContentvc.image = self.slider.sliderImages[index]
+            }
+            if self.slider.sliderDescriptions.count > index {
+                pageContentvc.desc = self.slider.sliderDescriptions[index]
+            }
+            
             pageContentvc.index = index
             pageContentvc.delegate = self
             return pageContentvc

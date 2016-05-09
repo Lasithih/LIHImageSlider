@@ -15,7 +15,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 let images: [UIImage] = [UIImage(named: "1")!,UIImage(named: "2")!,UIImage(named: "3")!,UIImage(named: "4")!,UIImage(named: "5")!,UIImage(named: "6")!]
 
 let slider1: LIHSlider = LIHSlider(images: images)
+slider1.sliderDescriptions = ["Image 1 description","Image 2 description","Image 3 description","Image 4 description","Image 5 description","Image 6 description"]
 self.sliderVc1  = LIHSliderViewController(slider: slider1)
+sliderVc1.delegate = self
 self.addChildViewController(self.sliderVc1)
 self.view.addSubview(self.sliderVc1.view)
 self.sliderVc1.didMoveToParentViewController(self)
@@ -44,6 +46,25 @@ Implement from `LIHSliderDelegate`
 func itemPressedAtIndex(index index: Int) {
 
 }
+```
+
+#####List of all properties
+```Swift
+public var sliderImages: [UIImage]
+public var sliderDescriptions: [String] //leave empty for remove description
+public var descriptionColor: UIColor  //default is white
+public var descriptionBackgroundAlpha: CGFloat //default is 0.3
+public var descriptionBackgroundColor: UIColor //default is black
+public var descriptionFont: UIFont //default is system font with size=15
+public var numberOfLinesInDescription: Int //default is 2
+public var transitionInterval: Double //default is 3.0
+public var customImageView: UIImageView?
+public var showPageIndicator: Bool //default is true
+
+//Sliding options
+public var transitionStyle: UIPageViewControllerTransitionStyle = UIPageViewControllerTransitionStyle.Scroll
+public var slidingOrientation: UIPageViewControllerNavigationOrientation = UIPageViewControllerNavigationOrientation.Horizontal
+public var sliderNavigationDirection: UIPageViewControllerNavigationDirection = UIPageViewControllerNavigationDirection.Forward
 ```
 
 

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4985CC1C79CACD6C04FBBD87'
+               BlueprintIdentifier = '9D4282B5290A53AE27442680'
                BlueprintName = 'LIHImageSlider'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'LIHImageSlider.framework'>
