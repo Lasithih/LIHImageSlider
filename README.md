@@ -60,6 +60,7 @@ public var numberOfLinesInDescription: Int //default is 2
 public var transitionInterval: Double //default is 3.0
 public var customImageView: UIImageView?
 public var showPageIndicator: Bool //default is true
+public var userInteractionEnabled: Bool //default is true
 
 //Sliding options
 public var transitionStyle: UIPageViewControllerTransitionStyle = UIPageViewControllerTransitionStyle.Scroll
@@ -81,6 +82,9 @@ pod 'LIHImageSlider'
 ```
 
 ### ChangeLog
+
+v1.0.6
+######User interaction controlls added
 
 v1.0.5
 ######Updated to Swift 3

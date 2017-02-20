@@ -70,6 +70,10 @@ open class LIHSliderViewController: UIViewController, LIHSliderItemDelegate {
         pageController.dataSource = self
         pageController.delegate = self
         
+        if !self.slider.userInteractionEnabled {
+            self.removeSwipeGesture()
+        }
+        
         let startingViewController: LIHSliderItemViewController = contentViewController(atIndex: currentIndex)
         pageController.setViewControllers([startingViewController], direction: .forward, animated: false, completion: nil)
         
@@ -87,6 +91,14 @@ open class LIHSliderViewController: UIViewController, LIHSliderItemDelegate {
         
         self.killTimer()
         self.activateTimer()
+    }
+    
+    fileprivate func removeSwipeGesture(){
+        for view in self.pageController.view.subviews {
+            if let subView = view as? UIScrollView {
+                subView.isScrollEnabled = false
+            }
+        }
     }
     
     fileprivate func setConstraints() {
