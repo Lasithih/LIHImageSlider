@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LIHImageSlider-LIHImageSlider.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>LIHImageSlider.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1B8C0D462676CC5284E2C8D9485B95EF</key>
+		<key>5CF2CDA18E3C3298D527EF89AA4A7A7D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>311CC665ADEBE0FCD3F5A7099CFB04A2</key>
+		<key>C03BAC99515F8484F1AB88E867F640D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3D6478146EF4D0126D0FF9F79A5BFF5D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5B276FF4986F1BAAC2A6C9F7E859B083</key>
+		<key>EEA1CAA46830CB63AB86ED3C92E6BD9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -15,7 +15,7 @@ class ViewController: UIViewController, LIHSliderDelegate {
     @IBOutlet weak var slider2Container: UIView!
     
     
-    private var sliderVc1: LIHSliderViewController!
+    fileprivate var sliderVc1: LIHSliderViewController!
 //    private var sliderVc2: LIHSliderViewController!
 
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class ViewController: UIViewController, LIHSliderDelegate {
         sliderVc1.delegate = self
         self.addChildViewController(self.sliderVc1)
         self.view.addSubview(self.sliderVc1.view)
-        self.sliderVc1.didMoveToParentViewController(self)
+        self.sliderVc1.didMove(toParentViewController: self)
         
         //Slider Two (Bottom)
 //        let slider2: LIHSlider = LIHSlider(images: images)
@@ -62,7 +62,7 @@ class ViewController: UIViewController, LIHSliderDelegate {
 
     
     
-    func itemPressedAtIndex(index index: Int) {
+    func itemPressedAtIndex(index: Int) {
         
         print("index \(index) is pressed")
     }

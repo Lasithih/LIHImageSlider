@@ -1,12 +1,11 @@
-source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'LIHImageSlider_Example', :exclusive => true do
-  pod 'LIHImageSlider', :path => '../'
-end
-
-target 'LIHImageSlider_Tests', :exclusive => true do
+target 'LIHImageSlider_Example' do
   pod 'LIHImageSlider', :path => '../'
 
-  
+  target 'LIHImageSlider_Tests' do
+    inherit! :search_paths
+
+    
+  end
 end

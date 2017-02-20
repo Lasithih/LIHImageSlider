@@ -1,25 +1,22 @@
 {
   "name": "LIHImageSlider",
-  "version": "0.2.0",
-  "summary": "An automatic image slider",
-  "description": "LIHImageSlider is an automatic image slider written in Swift",
-  "homepage": "https://github.com/Lasithih/LIHImageSlider",
-  "license": "MIT",
+  "version": "0.1.0",
+  "summary": "A short description of LIHImageSlider.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/lasithFidenz/LIHImageSlider",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
   "authors": {
-    "Lasith Hettiarachchi": "lasithih@yahoo.com"
+    "lasithFidenz": "lasith.h@fidenz.com"
   },
   "source": {
-    "git": "https://github.com/Lasithih/LIHImageSlider.git",
-    "tag": "0.2.0"
+    "git": "https://github.com/lasithFidenz/LIHImageSlider.git",
+    "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
-  "resource_bundles": {
-    "LIHImageSlider": [
-      "Pod/Assets/*.png"
-    ]
-  }
+  "source_files": "LIHImageSlider/Classes/**/*"
 }

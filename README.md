@@ -27,13 +27,13 @@ self.sliderVc1.didMoveToParentViewController(self)
 <p><img src="https://1.bp.blogspot.com/-ZDlRb25t914/VuZug5m_K5I/AAAAAAAACus/f-jd6LJJy2kuO_FkQNrWfU1vS0yP8IqXg/s320/LIHImageSlider2_2.gif"/></p>
 ```Swift
 let slider2: LIHSlider = LIHSlider(images: images)
-    //customizations
+//customizations
 slider2.transitionInterval = 5.0
 slider2.transitionStyle = UIPageViewControllerTransitionStyle.PageCurl
 slider2.slidingOrientation = UIPageViewControllerNavigationOrientation.Vertical
 slider2.sliderNavigationDirection = UIPageViewControllerNavigationDirection.Reverse
 slider2.showPageIndicator = false
-        
+
 self.sliderVc2  = LIHSliderViewController(slider: slider2)
 self.addChildViewController(self.sliderVc2)
 self.view.addSubview(self.sliderVc2.view)
@@ -79,6 +79,12 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "LIHImageSlider"
 ```
+
+### ChangeLog
+
+v1.0.2
+######Updated to Swift 3
+
 
 ## Author
 

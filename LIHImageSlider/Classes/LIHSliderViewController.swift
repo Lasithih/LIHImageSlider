@@ -10,22 +10,22 @@ import UIKit
 
 @objc public protocol LIHSliderDelegate {
     
-    func itemPressedAtIndex(index index: Int)
+    func itemPressedAtIndex(index: Int)
 }
 
-public class LIHSliderViewController: UIViewController, LIHSliderItemDelegate {
+open class LIHSliderViewController: UIViewController, LIHSliderItemDelegate {
 
     //@IBOutlet weak var pageControl: UIPageControl!
-    private var pageControl: UIPageControl!
-    private var pageController: UIPageViewController!
-    private var currentIndex: Int = 0 {
+    fileprivate var pageControl: UIPageControl!
+    fileprivate var pageController: UIPageViewController!
+    fileprivate var currentIndex: Int = 0 {
         didSet {
             self.pageControl.currentPage = currentIndex
         }
     }
-    private var pageTimer: NSTimer?
+    fileprivate var pageTimer: Timer?
     
-    private var slider: LIHSlider!
+    fileprivate var slider: LIHSlider!
     
     public init(slider: LIHSlider) {
         super.init(nibName: nil, bundle: nil)
@@ -33,14 +33,14 @@ public class LIHSliderViewController: UIViewController, LIHSliderItemDelegate {
         self.slider = slider
     }
     
-    public var delegate: LIHSliderDelegate?
+    open var delegate: LIHSliderDelegate?
 
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override public func viewDidLoad() {
-        self.view.backgroundColor = UIColor.orangeColor()
+    override open func viewDidLoad() {
+        self.view.backgroundColor = UIColor.orange
         self.killTimer()
         self.activateTimer()
         
@@ -51,16 +51,16 @@ public class LIHSliderViewController: UIViewController, LIHSliderItemDelegate {
         
         
         self.initializePager()
-        self.pageController.view.backgroundColor = UIColor.blueColor()
+        self.pageController.view.backgroundColor = UIColor.blue
     }
     
-    public override func viewDidLayoutSubviews() {
+    open override func viewDidLayoutSubviews() {
         
-        self.pageControl.center = CGPointMake(UIScreen.mainScreen().bounds.size.width/2, self.view.frame.size.height - 20)
+        self.pageControl.center = CGPoint(x: UIScreen.main.bounds.size.width/2, y: self.view.frame.size.height - 20)
     }
     
     //MARK - Private methods
-    private func initializePager() {
+    fileprivate func initializePager() {
         
         //Initialize page view controller
         self.pageControl.numberOfPages = self.slider.sliderImages.count
@@ -71,15 +71,15 @@ public class LIHSliderViewController: UIViewController, LIHSliderItemDelegate {
         pageController.delegate = self
         
         let startingViewController: LIHSliderItemViewController = contentViewController(atIndex: currentIndex)
-        pageController.setViewControllers([startingViewController], direction: .Forward, animated: false, completion: nil)
+        pageController.setViewControllers([startingViewController], direction: .forward, animated: false, completion: nil)
         
         self.view.addSubview(self.pageController.view)
-        self.view.bringSubviewToFront(self.pageControl)
-        pageController.didMoveToParentViewController(self)
+        self.view.bringSubview(toFront: self.pageControl)
+        pageController.didMove(toParentViewController: self)
         
         for sview in pageController.view.subviews {
             
-            if sview.isKindOfClass(UIScrollView) {
+            if sview.isKind(of: UIScrollView.self) {
                 (sview as! UIScrollView).delegate = self
             }
         }
@@ -89,38 +89,38 @@ public class LIHSliderViewController: UIViewController, LIHSliderItemDelegate {
         self.activateTimer()
     }
     
-    private func setConstraints() {
+    fileprivate func setConstraints() {
         
-        let top = NSLayoutConstraint(item: self.pageController.view, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0)
+        let top = NSLayoutConstraint(item: self.pageController.view, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: self.view, attribute: NSLayoutAttribute.top, multiplier: 1, constant: 0)
         
-        let bottom = NSLayoutConstraint(item: self.pageController.view, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0)
+        let bottom = NSLayoutConstraint(item: self.pageController.view, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: self.view, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: 0)
         
-        let left = NSLayoutConstraint(item: self.pageController.view, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Left, multiplier: 1, constant: 0)
+        let left = NSLayoutConstraint(item: self.pageController.view, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: self.view, attribute: NSLayoutAttribute.left, multiplier: 1, constant: 0)
         
-        let right = NSLayoutConstraint(item: self.pageController.view, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Right, multiplier: 1, constant: 0)
+        let right = NSLayoutConstraint(item: self.pageController.view, attribute: NSLayoutAttribute.right, relatedBy: NSLayoutRelation.equal, toItem: self.view, attribute: NSLayoutAttribute.right, multiplier: 1, constant: 0)
         
         self.view.addConstraints([top,bottom,left,right])
     }
     
-    private func activateTimer() {
+    fileprivate func activateTimer() {
         
-        self.pageTimer = NSTimer.scheduledTimerWithTimeInterval(self.slider.transitionInterval, target: self, selector: #selector(LIHSliderViewController.pageSwitchTimer(_:)), userInfo: nil, repeats: true)
+        self.pageTimer = Timer.scheduledTimer(timeInterval: self.slider.transitionInterval, target: self, selector: #selector(LIHSliderViewController.pageSwitchTimer(_:)), userInfo: nil, repeats: true)
     }
     
-    private func killTimer() {
+    fileprivate func killTimer() {
         self.pageTimer?.invalidate()
         self.pageTimer = nil
         
     }
     
-    func pageSwitchTimer(sender: AnyObject) {
+    func pageSwitchTimer(_ sender: AnyObject) {
         
         if currentIndex == self.slider.sliderImages.count - 1 {
-            self.pageController.setViewControllers([self.contentViewController(atIndex: 0)], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: { (complete) -> Void in
+            self.pageController.setViewControllers([self.contentViewController(atIndex: 0)], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: { (complete) -> Void in
                 self.currentIndex = 0
             })
         } else {
-            self.pageController.setViewControllers([self.contentViewController(atIndex: self.currentIndex+1)], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: { (complete) -> Void in
+            self.pageController.setViewControllers([self.contentViewController(atIndex: self.currentIndex+1)], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: { (complete) -> Void in
                 self.currentIndex = self.currentIndex + 1
             })
         }
@@ -128,12 +128,12 @@ public class LIHSliderViewController: UIViewController, LIHSliderItemDelegate {
     
     
     
-    private func contentViewController(atIndex index: Int) -> LIHSliderItemViewController! {
+    fileprivate func contentViewController(atIndex index: Int) -> LIHSliderItemViewController! {
         if self.slider.sliderImages.count == 0 || index >= self.slider.sliderImages.count {
-            self.pageControl.hidden = true
+            self.pageControl.isHidden = true
             return nil
         }
-        self.pageControl.hidden = false
+        self.pageControl.isHidden = false
         let contentvc: LIHSliderItemViewController? = LIHSliderItemViewController(slider: self.slider)
         if let pageContentvc = contentvc {
             
@@ -153,7 +153,7 @@ public class LIHSliderViewController: UIViewController, LIHSliderItemDelegate {
     }
     
     
-    func itemPressedAtIndex(index: Int) {
+    func itemPressedAtIndex(_ index: Int) {
         
         self.delegate?.itemPressedAtIndex(index: index)
     }
@@ -162,7 +162,7 @@ public class LIHSliderViewController: UIViewController, LIHSliderItemDelegate {
 
 extension LIHSliderViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
-    public func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         let vc = viewController as! LIHSliderItemViewController
         let index = vc.index
@@ -174,7 +174,7 @@ extension LIHSliderViewController: UIPageViewControllerDataSource, UIPageViewCon
         return self.contentViewController(atIndex: index + 1)
     }
     
-    public func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         let vc = viewController as! LIHSliderItemViewController
         let index = vc.index
@@ -186,7 +186,7 @@ extension LIHSliderViewController: UIPageViewControllerDataSource, UIPageViewCon
         return self.contentViewController(atIndex: index - 1)
     }
     
-    public func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    public func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
         if !completed {
             return
@@ -199,12 +199,12 @@ extension LIHSliderViewController: UIPageViewControllerDataSource, UIPageViewCon
 
 extension LIHSliderViewController: UIScrollViewDelegate {
     
-    public func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         
         self.killTimer()
     }
     
-    public func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
         self.killTimer()
         self.activateTimer()

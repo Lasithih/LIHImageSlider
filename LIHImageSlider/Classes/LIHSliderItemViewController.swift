@@ -10,21 +10,21 @@ import UIKit
 
 @objc protocol LIHSliderItemDelegate {
     
-    func itemPressedAtIndex(index: Int)
+    func itemPressedAtIndex(_ index: Int)
 }
 
 class LIHSliderItemViewController: UIViewController {
     
-    private var imageView: UIImageView!
-    private var button: UIButton!
-    private var lblDescription: UILabel?
-    private var labelContainer: UIView?
+    fileprivate var imageView: UIImageView!
+    fileprivate var button: UIButton!
+    fileprivate var lblDescription: UILabel?
+    fileprivate var labelContainer: UIView?
     
     var index: Int = 0
     var image: UIImage?
     var desc: String?
     
-    private var slider: LIHSlider!
+    fileprivate var slider: LIHSlider!
     
     var delegate: LIHSliderItemDelegate?
     
@@ -44,12 +44,12 @@ class LIHSliderItemViewController: UIViewController {
             self.imageView = imageview
         } else {
             self.imageView = UIImageView()
-            self.imageView.contentMode = UIViewContentMode.ScaleAspectFill
+            self.imageView.contentMode = UIViewContentMode.scaleAspectFill
         }
         
         
         self.button = UIButton()
-        self.button.addTarget(self, action: #selector(LIHSliderItemViewController.pressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        self.button.addTarget(self, action: #selector(LIHSliderItemViewController.pressed(_:)), for: UIControlEvents.touchUpInside)
         self.view.addSubview(self.imageView)
         self.view.addSubview(self.button)
         self.imageView.frame = self.view.frame
@@ -64,12 +64,12 @@ class LIHSliderItemViewController: UIViewController {
             let lblHeight = self.view.frame.size.height / 2
             let lblY = self.view.frame.origin.y + lblHeight
             self.lblDescription?.font = self.slider.descriptionFont
-            self.lblDescription?.frame = CGRectMake(self.view.frame.origin.x+10, lblY, self.view.frame.size.width-10, lblHeight)
+            self.lblDescription?.frame = CGRect(x: self.view.frame.origin.x+10, y: lblY, width: self.view.frame.size.width-10, height: lblHeight)
             
             self.labelContainer = UIView()
             self.labelContainer?.backgroundColor = self.slider.descriptionBackgroundColor
             self.labelContainer?.alpha = self.slider.descriptionBackgroundAlpha
-            self.labelContainer?.frame = CGRectMake(self.view.frame.origin.x, lblY, self.view.frame.size.width, lblHeight)
+            self.labelContainer?.frame = CGRect(x: self.view.frame.origin.x, y: lblY, width: self.view.frame.size.width, height: lblHeight)
             
             self.view.addSubview(self.labelContainer!)
             self.view.addSubview(self.lblDescription!)
@@ -84,8 +84,8 @@ class LIHSliderItemViewController: UIViewController {
         self.button.frame = self.imageView.frame
         let lblHeight = self.view.frame.size.height / 2
         let lblY = self.view.frame.origin.y + lblHeight
-        self.lblDescription?.frame = CGRectMake(self.view.frame.origin.x+10, lblY, self.view.frame.size.width-10, lblHeight)
-        self.labelContainer?.frame = CGRectMake(self.view.frame.origin.x, lblY, self.view.frame.size.width, lblHeight)
+        self.lblDescription?.frame = CGRect(x: self.view.frame.origin.x+10, y: lblY, width: self.view.frame.size.width-10, height: lblHeight)
+        self.labelContainer?.frame = CGRect(x: self.view.frame.origin.x, y: lblY, width: self.view.frame.size.width, height: lblHeight)
     }
     
     override func didReceiveMemoryWarning() {
@@ -109,11 +109,11 @@ class LIHSliderItemViewController: UIViewController {
         if let description = self.desc {
             self.lblDescription?.text = description
         } else {
-            self.labelContainer?.hidden = true
+            self.labelContainer?.isHidden = true
         }
     }
     
-    internal func pressed(sender:UIButton) {
+    internal func pressed(_ sender:UIButton) {
         
         self.delegate?.itemPressedAtIndex(self.index)
     }

@@ -1,5 +1,5 @@
 PODS:
-  - LIHImageSlider (0.2.0)
+  - LIHImageSlider (0.1.0)
 
 DEPENDENCIES:
   - LIHImageSlider (from `../`)
@@ -9,6 +9,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  LIHImageSlider: 5baced31b0e74d4a5893c4c744095760149cead3
+  LIHImageSlider: c428538946f60e04dd27cb715e78b01749c7c557
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 400d7a7a7394ad157c5f6ed56bcbfcbbad8f446b
+
+COCOAPODS: 1.1.0.rc.2
