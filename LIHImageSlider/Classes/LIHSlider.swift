@@ -11,7 +11,6 @@ import Foundation
 open class LIHSlider: NSObject {
     
     open var sliderImages: [UIImage] = []
-    
     open var sliderDescriptions: [String] = []
     open var descriptionColor: UIColor = UIColor.white
     open var descriptionBackgroundAlpha: CGFloat = 0.3
