@@ -1,5 +1,5 @@
 PODS:
-  - LIHImageSlider (1.0.6)
+  - LIHImageSlider (1.0.8)
 
 DEPENDENCIES:
   - LIHImageSlider (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  LIHImageSlider: a93f7f6e81bdb05873524a5c8075d96006b3da32
+  LIHImageSlider: a8fc3d6dba0707e1e3b08cf645e51dd717d181e7
 
 PODFILE CHECKSUM: 400d7a7a7394ad157c5f6ed56bcbfcbbad8f446b
 

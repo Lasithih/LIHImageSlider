@@ -1,6 +1,6 @@
 {
   "name": "LIHImageSlider",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "summary": "Simplified image slider for Swift",
   "description": "LIHImageSlider is a simplified image slider for Swift",
   "homepage": "https://github.com/Lasithih/LIHImageSlider",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Lasithih/LIHImageSlider.git",
-    "tag": "1.0.6"
+    "tag": "1.0.8"
   },
   "platforms": {
     "ios": "8.0"
