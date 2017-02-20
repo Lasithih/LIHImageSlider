@@ -41,7 +41,7 @@ self.sliderVc2.didMoveToParentViewController(self)
 ```
 
 #####Item Click
-Implement from `LIHSliderDelegate` 
+Implement `LIHSliderDelegate` 
 ```Swift
 func itemPressedAtIndex(index index: Int) {
 
@@ -51,11 +51,11 @@ func itemPressedAtIndex(index index: Int) {
 #####List of all properties
 ```Swift
 public var sliderImages: [UIImage]
-public var sliderDescriptions: [String] //leave empty for remove description
+public var sliderDescriptions: [String] //leave empty to remove description
 public var descriptionColor: UIColor  //default is white
 public var descriptionBackgroundAlpha: CGFloat //default is 0.3
 public var descriptionBackgroundColor: UIColor //default is black
-public var descriptionFont: UIFont //default is system font with size=15
+public var descriptionFont: UIFont //default is system font with size 15
 public var numberOfLinesInDescription: Int //default is 2
 public var transitionInterval: Double //default is 3.0
 public var customImageView: UIImageView?
@@ -77,7 +77,7 @@ LIHImageSlider is available through [CocoaPods](http://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "LIHImageSlider"
+pod 'LIHImageSlider'
 ```
 
 ### ChangeLog
