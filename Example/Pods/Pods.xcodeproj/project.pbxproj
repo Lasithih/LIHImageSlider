@@ -12,9 +12,9 @@
 		1A3EBEE091BD3152107EBDAB676C10BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		2EAC4AD5101ED2360AD613D245DF26A3 /* Pods-LIHImageSlider_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 692B62204FCA0B743C917F4492AAEC67 /* Pods-LIHImageSlider_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		649C1D968554C1B55D753F5C995AEC1C /* Pods-LIHImageSlider_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C7FC7B82936F8106336112D27174F1 /* Pods-LIHImageSlider_Tests-dummy.m */; };
-		788E346E1E5AE90900A0C2AA /* LIHSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788E346B1E5AE90900A0C2AA /* LIHSlider.swift */; };
-		788E346F1E5AE90900A0C2AA /* LIHSliderItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788E346C1E5AE90900A0C2AA /* LIHSliderItemViewController.swift */; };
-		788E34701E5AE90900A0C2AA /* LIHSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788E346D1E5AE90900A0C2AA /* LIHSliderViewController.swift */; };
+		788E34761E5AF23D00A0C2AA /* LIHSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788E34731E5AF23D00A0C2AA /* LIHSlider.swift */; };
+		788E34771E5AF23D00A0C2AA /* LIHSliderItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788E34741E5AF23D00A0C2AA /* LIHSliderItemViewController.swift */; };
+		788E34781E5AF23D00A0C2AA /* LIHSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788E34751E5AF23D00A0C2AA /* LIHSliderViewController.swift */; };
 		795AE31C36A8303F269FCD330430E1C0 /* Pods-LIHImageSlider_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE852FBF69FF9E104BA503B64AA97A99 /* Pods-LIHImageSlider_Example-dummy.m */; };
 		9C487A7F5FE1A5C04F730B40FB34A49C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		C7C2123DE88C5086B9603A612BE6FA94 /* Pods-LIHImageSlider_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B6B205E7132D1986E971945BBCDFF4E2 /* Pods-LIHImageSlider_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -48,9 +48,10 @@
 		692B62204FCA0B743C917F4492AAEC67 /* Pods-LIHImageSlider_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LIHImageSlider_Example-umbrella.h"; sourceTree = "<group>"; };
 		767C4ED95557AE711B45963FC4B14335 /* Pods-LIHImageSlider_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LIHImageSlider_Tests.modulemap"; sourceTree = "<group>"; };
 		77D7894ABDB1385A23CC0A625427F21B /* LIHImageSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LIHImageSlider-dummy.m"; sourceTree = "<group>"; };
-		788E346B1E5AE90900A0C2AA /* LIHSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LIHSlider.swift; sourceTree = "<group>"; };
-		788E346C1E5AE90900A0C2AA /* LIHSliderItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LIHSliderItemViewController.swift; sourceTree = "<group>"; };
-		788E346D1E5AE90900A0C2AA /* LIHSliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LIHSliderViewController.swift; sourceTree = "<group>"; };
+		788E34721E5AF23D00A0C2AA /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		788E34731E5AF23D00A0C2AA /* LIHSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LIHSlider.swift; sourceTree = "<group>"; };
+		788E34741E5AF23D00A0C2AA /* LIHSliderItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LIHSliderItemViewController.swift; sourceTree = "<group>"; };
+		788E34751E5AF23D00A0C2AA /* LIHSliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LIHSliderViewController.swift; sourceTree = "<group>"; };
 		813B96C1A7214FB31811B6E08938BD13 /* LIHImageSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LIHImageSlider.modulemap; sourceTree = "<group>"; };
 		8413EF187195D519700DBE523683B1F7 /* Pods-LIHImageSlider_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LIHImageSlider_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		88E103C6D3C1125B7302B60093435F23 /* LIHImageSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LIHImageSlider-prefix.pch"; sourceTree = "<group>"; };
@@ -96,16 +97,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0773FEABCF1D17B5C84364B4431EE8FE /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				788E346B1E5AE90900A0C2AA /* LIHSlider.swift */,
-				788E346C1E5AE90900A0C2AA /* LIHSliderItemViewController.swift */,
-				788E346D1E5AE90900A0C2AA /* LIHSliderViewController.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		234433579CAFE1BF7CFF977EE0D14E2B /* LIHImageSlider */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +175,18 @@
 			path = "Target Support Files/Pods-LIHImageSlider_Example";
 			sourceTree = "<group>";
 		};
+		788E34711E5AF23D00A0C2AA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				788E34721E5AF23D00A0C2AA /* .gitkeep */,
+				788E34731E5AF23D00A0C2AA /* LIHSlider.swift */,
+				788E34741E5AF23D00A0C2AA /* LIHSliderItemViewController.swift */,
+				788E34751E5AF23D00A0C2AA /* LIHSliderViewController.swift */,
+			);
+			name = Classes;
+			path = ../Pod/Classes;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -198,7 +201,7 @@
 		AC08A9D8C5026E58B6AE1F74815998E8 /* LIHImageSlider */ = {
 			isa = PBXGroup;
 			children = (
-				0773FEABCF1D17B5C84364B4431EE8FE /* Classes */,
+				788E34711E5AF23D00A0C2AA /* Classes */,
 			);
 			path = LIHImageSlider;
 			sourceTree = "<group>";
@@ -351,10 +354,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				788E346E1E5AE90900A0C2AA /* LIHSlider.swift in Sources */,
-				788E346F1E5AE90900A0C2AA /* LIHSliderItemViewController.swift in Sources */,
+				788E34761E5AF23D00A0C2AA /* LIHSlider.swift in Sources */,
+				788E34771E5AF23D00A0C2AA /* LIHSliderItemViewController.swift in Sources */,
 				EE8582E85B2D1A4FD88ED3A1DCD08B4C /* LIHImageSlider-dummy.m in Sources */,
-				788E34701E5AE90900A0C2AA /* LIHSliderViewController.swift in Sources */,
+				788E34781E5AF23D00A0C2AA /* LIHSliderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
