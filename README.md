@@ -9,8 +9,9 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first
 
-#####Default Slider
+#####  Default Slider
 <p><img src="https://2.bp.blogspot.com/-rMzLaIDW0D8/VuZug9qrMPI/AAAAAAAACuo/sMChPhCiN4UVoBeIi5Al3rpqq2WYbT8UA/s320/LIHImageSlider2_1.gif"/></p>
+
 ```Swift
 let images: [UIImage] = [UIImage(named: "1")!,UIImage(named: "2")!,UIImage(named: "3")!,UIImage(named: "4")!,UIImage(named: "5")!,UIImage(named: "6")!]
 
@@ -23,8 +24,9 @@ self.view.addSubview(self.sliderVc1.view)
 self.sliderVc1.didMoveToParentViewController(self)
 ```
 
-#####Customized Slider
+#####  Customized Slider
 <p><img src="https://1.bp.blogspot.com/-ZDlRb25t914/VuZug5m_K5I/AAAAAAAACus/f-jd6LJJy2kuO_FkQNrWfU1vS0yP8IqXg/s320/LIHImageSlider2_2.gif"/></p>
+
 ```Swift
 let slider2: LIHSlider = LIHSlider(images: images)
 //customizations
@@ -40,7 +42,7 @@ self.view.addSubview(self.sliderVc2.view)
 self.sliderVc2.didMoveToParentViewController(self)
 ```
 
-#####Item Click
+##### Item Click
 Implement `LIHSliderDelegate` 
 ```Swift
 func itemPressedAtIndex(index index: Int) {
@@ -48,7 +50,7 @@ func itemPressedAtIndex(index index: Int) {
 }
 ```
 
-#####List of all properties
+##### List of all properties
 ```Swift
 public var sliderImages: [UIImage]
 public var sliderDescriptions: [String] //leave empty to remove description
@@ -84,10 +86,10 @@ pod 'LIHImageSlider'
 ### ChangeLog
 
 v1.0.6
-######User interaction controlls added
+###### User interaction controlls added
 
 v1.0.5
-######Updated to Swift 3
+###### Updated to Swift 3
 
 
 ## Author
