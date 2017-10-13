@@ -113,7 +113,7 @@ class LIHSliderItemViewController: UIViewController {
         }
     }
     
-    internal func pressed(_ sender:UIButton) {
+    @objc internal func pressed(_ sender:UIButton) {
         
         self.delegate?.itemPressedAtIndex(self.index)
     }

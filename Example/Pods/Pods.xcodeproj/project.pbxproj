@@ -33,26 +33,26 @@
 
 /* Begin PBXFileReference section */
 		0580D93014EB3E5E6349D8BAE80BE7ED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0DFD936CB844686C5A7C864FCD40C0E8 /* Pods-LIHImageSlider_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LIHImageSlider_Example.modulemap"; sourceTree = "<group>"; };
+		0DFD936CB844686C5A7C864FCD40C0E8 /* Pods-LIHImageSlider_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LIHImageSlider_Example.modulemap"; sourceTree = "<group>"; };
 		1C0CBCDF8BFE2ED9B864B9AFC8B56F8F /* Pods-LIHImageSlider_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LIHImageSlider_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		2CE502C78292732C9338BB21B3904261 /* Pods-LIHImageSlider_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LIHImageSlider_Example.release.xcconfig"; sourceTree = "<group>"; };
 		36E119163E34E5197A80758DD361B017 /* Pods-LIHImageSlider_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LIHImageSlider_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		376E867843021A45275C854F3B85B2A6 /* LIHImageSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LIHImageSlider-umbrella.h"; sourceTree = "<group>"; };
 		39347B12CA6A65F8D46708B741E5124E /* Pods-LIHImageSlider_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LIHImageSlider_Example-resources.sh"; sourceTree = "<group>"; };
 		3EB001992807F3CDBFC238CE5A6F069F /* Pods-LIHImageSlider_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LIHImageSlider_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		42B33A099326C5D5D1046845148B758B /* Pods_LIHImageSlider_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LIHImageSlider_Example.framework; path = "Pods-LIHImageSlider_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42B33A099326C5D5D1046845148B758B /* Pods_LIHImageSlider_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LIHImageSlider_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		508CDE6831EF8FBD231A773F29E00459 /* Pods-LIHImageSlider_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LIHImageSlider_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		5393EA8BBD31770ACCF184B2CC1357C1 /* LIHImageSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LIHImageSlider.framework; path = LIHImageSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5393EA8BBD31770ACCF184B2CC1357C1 /* LIHImageSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LIHImageSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C7FC7B82936F8106336112D27174F1 /* Pods-LIHImageSlider_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LIHImageSlider_Tests-dummy.m"; sourceTree = "<group>"; };
 		671E427EB505E7C9406929E30F1C204A /* Pods-LIHImageSlider_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LIHImageSlider_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		692B62204FCA0B743C917F4492AAEC67 /* Pods-LIHImageSlider_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LIHImageSlider_Example-umbrella.h"; sourceTree = "<group>"; };
-		767C4ED95557AE711B45963FC4B14335 /* Pods-LIHImageSlider_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LIHImageSlider_Tests.modulemap"; sourceTree = "<group>"; };
+		767C4ED95557AE711B45963FC4B14335 /* Pods-LIHImageSlider_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LIHImageSlider_Tests.modulemap"; sourceTree = "<group>"; };
 		77D7894ABDB1385A23CC0A625427F21B /* LIHImageSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LIHImageSlider-dummy.m"; sourceTree = "<group>"; };
-		813B96C1A7214FB31811B6E08938BD13 /* LIHImageSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = LIHImageSlider.modulemap; sourceTree = "<group>"; };
+		813B96C1A7214FB31811B6E08938BD13 /* LIHImageSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LIHImageSlider.modulemap; sourceTree = "<group>"; };
 		8413EF187195D519700DBE523683B1F7 /* Pods-LIHImageSlider_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LIHImageSlider_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		88E103C6D3C1125B7302B60093435F23 /* LIHImageSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LIHImageSlider-prefix.pch"; sourceTree = "<group>"; };
 		904E2BDBEE33DD27B2072B9F616C6FE7 /* Pods-LIHImageSlider_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LIHImageSlider_Example-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AF9D0EBE46277DEF1EE42DA191EA4A7A /* LIHImageSlider.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LIHImageSlider.xcconfig; sourceTree = "<group>"; };
 		AFB737459F3518D87E300AFCE23DFFA9 /* Pods-LIHImageSlider_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LIHImageSlider_Tests-resources.sh"; sourceTree = "<group>"; };
 		B6788069F2509D35A04A5627016316B9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		C4E8A79E7301782543746DD5011BB71E /* Pods-LIHImageSlider_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LIHImageSlider_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DB4C4D41239F503E445CC3EBBB393935 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E41F57BDF7DD081BB8BCAC9CB4C4D6B8 /* Pods_LIHImageSlider_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LIHImageSlider_Tests.framework; path = "Pods-LIHImageSlider_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E41F57BDF7DD081BB8BCAC9CB4C4D6B8 /* Pods_LIHImageSlider_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LIHImageSlider_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE852FBF69FF9E104BA503B64AA97A99 /* Pods-LIHImageSlider_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LIHImageSlider_Example-dummy.m"; sourceTree = "<group>"; };
 		F58C975F8DB8E1A19CDE34CA5802A001 /* LIHSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIHSlider.swift; sourceTree = "<group>"; };
 		F8B14B072FE30139339C45656EC841BC /* LIHSliderItemViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LIHSliderItemViewController.swift; sourceTree = "<group>"; };
@@ -171,7 +171,6 @@
 			children = (
 				E2079D75E0BBF0FFA8EBB052A2470CD2 /* Classes */,
 			);
-			name = LIHImageSlider;
 			path = LIHImageSlider;
 			sourceTree = "<group>";
 		};
@@ -217,7 +216,6 @@
 				F8B14B072FE30139339C45656EC841BC /* LIHSliderItemViewController.swift */,
 				C27A6FDDEDDB53C6A429F9C3E359E3E5 /* LIHSliderViewController.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -319,7 +317,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0900;
+				TargetAttributes = {
+					207656909A49887CE8C71E756AB7770A = {
+						LastSwiftMigration = 0900;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -440,7 +443,8 @@
 				PRODUCT_NAME = LIHImageSlider;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -473,7 +477,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -489,19 +494,29 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -515,6 +530,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -564,20 +580,30 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
