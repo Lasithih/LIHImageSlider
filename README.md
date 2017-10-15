@@ -1,6 +1,6 @@
 # LIHImageSlider
 
-[![CI Status](http://img.shields.io/travis/Lasith Hettiarachchi/LIHImageSlider.svg?style=flat)](https://travis-ci.org/Lasith Hettiarachchi/LIHImageSlider)
+<!--[![CI Status](http://img.shields.io/travis/Lasith Hettiarachchi/LIHImageSlider.svg?style=flat)](https://travis-ci.org/Lasith Hettiarachchi/LIHImageSlider)-->
 [![Version](https://img.shields.io/cocoapods/v/LIHImageSlider.svg?style=flat)](http://cocoapods.org/pods/LIHImageSlider)
 [![License](https://img.shields.io/cocoapods/l/LIHImageSlider.svg?style=flat)](http://cocoapods.org/pods/LIHImageSlider)
 [![Platform](https://img.shields.io/cocoapods/p/LIHImageSlider.svg?style=flat)](http://cocoapods.org/pods/LIHImageSlider)
@@ -84,6 +84,9 @@ pod 'LIHImageSlider'
 ```
 
 ### ChangeLog
+
+v1.0.9
+###### Swift 4 Compatibility. Thanks @emre-yilmaz
 
 v1.0.6
 ###### User interaction controlls added
