@@ -125,7 +125,7 @@ open class LIHSliderViewController: UIViewController, LIHSliderItemDelegate {
         
     }
     
-    func pageSwitchTimer(_ sender: AnyObject) {
+    @objc func pageSwitchTimer(_ sender: AnyObject) {
         
         if currentIndex == self.slider.sliderImages.count - 1 {
             self.pageController.setViewControllers([self.contentViewController(atIndex: 0)], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: { (complete) -> Void in
